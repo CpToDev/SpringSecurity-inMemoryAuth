@@ -15,7 +15,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication()
                 .withUser("saurav")
                 .password("saurav123")
-                .roles("USER");
+                .roles("USER")
+                .and()
+                .withUser("aman")
+                .password("aman123")
+                .roles("USER","ADMIN");
+        
 
     }
     // we cau use .password({noop}saurav123) /// seen from baeldung.com
